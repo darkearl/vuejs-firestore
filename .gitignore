@@ -1,6 +1,3 @@
 node_modules/
 .c9
-.firebase/
-cloud
-.firebaserc
-firebase.json
+npm-debug*

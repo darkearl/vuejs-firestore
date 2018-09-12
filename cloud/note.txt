@@ -1,0 +1,15 @@
+
+firestore-backup-restore --accountCredentials cloud/pro.json --backupPath cloud/backup_pro
+
+firestore-backup-restore --restoreAccountCredentials cloud/pro.json --backupPath cloud/backup_pro
+
+
+firestore-backup-restore --accountCredentials cloud/dev.json --backupPath cloud/backup_dev
+
+firestore-backup-restore --restoreAccountCredentials cloud/dev.json --backupPath cloud/backup_dev
+
+
+npm install -g firebase-tools
+firebase login --no-localhost
+firebase init
+firebase deploy
