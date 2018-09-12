@@ -1,0 +1,51 @@
+  $color: #333;
+  $border-color: rgb(244, 244, 244);
+
+@mixin border($direction, $width, $style, $color){
+    @if($direction == 'all'){
+        border: $width $style $color;
+    } @else {
+        border-#{$direction}: $width $style $color;
+    }
+}
+
+table.vgt-table{
+  font-size: 14px !important;
+  color:#333 !important;
+  td{
+    color:inherit !important;
+  }
+  thead th{
+    background:none !important;
+    color:inherit !important;
+  }
+  &.bordered{
+    td, th{
+      @include border(all, 1px, solid, $border-color !important )
+    }
+    th{
+      @include border(bottom, 3px, solid, $border-color !important )
+    }
+  }
+}
+
+  .vgt-global-search{
+    border:none !important;
+    background:none !important;
+  }
+
+  .vgt-wrap__footer{
+    border:none !important;
+    background:none !important;
+  }
+  .vgt-wrap__footer .footer__row-count__label{
+    font-size: 14px !important;
+    color:$color !important;
+  }
+  .vgt-wrap__footer {
+    .footer__navigation__page-btn,
+    .footer__navigation__info,
+    .footer__row-count__select{
+      color:$color !important;
+    }
+  }

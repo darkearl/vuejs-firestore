@@ -1,33 +1,66 @@
-import DashView from './components/Dash.vue'
-import LoginView from './components/Login.vue'
-import NotFoundView from './components/404.vue'
 
-// Import Views - Dash
-import DashboardView from './components/views/Dashboard.vue'
+import {
+  LoginPage,
+  DashContainer,
+  DashboardPage,
+  AccountsPage,
+  EventsPage,
+  TagsPage,
+  SettingPage,
+  NotFoundPage
+} from '@/containers'
 
-// Routes
-const routes = [
-  {
+
+const routes = [{
     path: '/login',
-    component: LoginView,
-    meta: {requiresNotAuth: true}
+    component: LoginPage,
+    meta: { requiresNotAuth: true }
   },
   {
     path: '/',
-    component: DashView,
-    children: [
-      {
+    component: DashContainer,
+    meta: { requiresAuth: true },
+    children: [{
         path: 'dashboard',
         alias: '',
-        component: DashboardView,
+        component: DashboardPage,
         name: 'Dashboard',
-        meta: {description: 'Overview of environment', requiresAuth: true}
+        meta: { description: 'Thống kê và báo cáo' }
+      },
+      {
+        path: 'events',
+        alias: '',
+        component: EventsPage,
+        name: 'Sự kiện',
+        meta: { description: 'Quản lý sự kiện hàng ngày' }
+      },
+      {
+        path: 'tags',
+        alias: '',
+        component: TagsPage,
+        name: 'Danh mục',
+        meta: { description: 'Quản lý các danh mục' }
+      },
+      {
+        path: 'accounts',
+        alias: '',
+        component: AccountsPage,
+        name: 'Tài khoản',
+        meta: { description: 'Thông tin tài khoản và chuyển khoản' }
+      },
+      {
+        path: 'setting',
+        alias: '',
+        component: SettingPage,
+        name: 'Cài đặt',
+        meta: { description: '' }
       }
     ]
-  }, {
+  },
+  {
     // not found handler
     path: '*',
-    component: NotFoundView
+    component: NotFoundPage
   }
 ]
 
