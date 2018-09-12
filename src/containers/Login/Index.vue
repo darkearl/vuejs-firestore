@@ -1,34 +1,21 @@
 <template>
-  <div class="login-box">
-    <div class="login-logo">
-      <a href="../../index2.html"><b>Admin</b>LTE</a>
-    </div>
-    <!-- /.login-logo -->
-    <div class="login-box-body">
-      <p class="login-box-msg">Welcome back</p>
-      <!-- errors -->
-      <p v-if=response class="text-red login-box-msg">{{response}}</p>
-
-      <form @submit.prevent="login">
-        <div class="form-group has-feedback">
-          <input type="email" class="form-control" v-model.trim="email" placeholder="you@email.com">
-          <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-        </div>
-        <div class="form-group has-feedback">
-          <input type="password" class="form-control" v-model.trim="password" placeholder="******">
-          <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-        </div>
-        <div class="row">
-          <div class="col-xs-8">
+  <div class="login-form">
+    <div class="main-div col-xs-12 col-sm-8 col-md-4">
+      <div class="panel">
+        <h2>Admin Login</h2>
+        <!-- errors -->
+        <p v-if=response class="text-red login-box-msg">{{response}}</p>
+        <p v-else>Please enter your email and password</p>
+      </div>
+      <form id="Login" @submit.prevent="login">
+          <div class="form-group">
+              <input type="email" class="form-control" id="inputEmail" placeholder="Email Address" v-model.trim="email">
           </div>
-          <!-- /.col -->
-          <div class="col-xs-4">
-            <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+          <div class="form-group">
+              <input type="password" class="form-control" id="inputPassword" placeholder="Password" v-model.trim="password">
           </div>
-          <!-- /.col -->
-        </div>
+          <button type="submit" class="btn btn-primary">Login</button>
       </form>
-
     </div>
     <!-- /.login-box-body -->
   </div>
@@ -72,6 +59,6 @@ export default {
 }
 </script>
 
-<style>
-  @import 'style.css';
-</style>
+<style lang="scss" >
+  @import "style";
+</style>  

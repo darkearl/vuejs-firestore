@@ -1,3 +1,14 @@
+.DS_Store
 node_modules/
+dist/
+npm-debug.log
+yarn-error.log
+# Cloud9 IDE - http://c9.io
+.c9revisions
 .c9
-npm-debug*
+# Vscode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
