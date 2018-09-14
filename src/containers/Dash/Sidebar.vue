@@ -34,6 +34,12 @@
               <span class="page">Sự kiện</span>
             </a>
           </router-link>
+          <router-link tag="li" class="pageLink" to="/borrow">
+            <a>
+              <i class="fa fa-users text-red"></i>
+              <span class="page">Vay/Mượn</span>
+            </a>
+          </router-link>
           <router-link tag="li" class="pageLink" to="/tags">
             <a>
               <i class="fa fa-tags text-aqua"></i>

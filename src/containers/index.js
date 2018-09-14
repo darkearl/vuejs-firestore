@@ -22,5 +22,8 @@ export const TagsPage = _TagsPage
 import _SettingPage from './Dash/Setting/Index.vue'
 export const SettingPage = _SettingPage
 
+import _BorrowPage from './Dash/Borrow/Index.vue'
+export const BorrowPage = _BorrowPage
+
 import _NotFoundPage from './404/Index.vue'
 export const NotFoundPage = _NotFoundPage

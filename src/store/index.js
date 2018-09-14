@@ -6,6 +6,7 @@ import events from './events'
 import groups from './groups'
 import tags from './tags'
 import reports from './reports'
+import borrow from './borrow'
 Vue.use(Vuex)
 
 const state = {
@@ -37,6 +38,7 @@ export default new Vuex.Store({
     groups,
     tags,
     events,
-    reports
+    reports,
+    borrow
   }
 })

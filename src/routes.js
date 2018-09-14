@@ -7,6 +7,7 @@ import {
   EventsPage,
   TagsPage,
   SettingPage,
+  BorrowPage,
   NotFoundPage
 } from '@/containers'
 
@@ -33,6 +34,13 @@ const routes = [{
         component: EventsPage,
         name: 'Sự kiện',
         meta: { description: 'Quản lý sự kiện hàng ngày' }
+      },
+      {
+        path: 'borrow',
+        alias: '',
+        component: BorrowPage,
+        name: 'Vay/Mượn',
+        meta: { description: ''}
       },
       {
         path: 'tags',

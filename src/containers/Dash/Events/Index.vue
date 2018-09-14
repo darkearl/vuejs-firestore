@@ -14,7 +14,8 @@
         <div class="box-header">
           <h3 class="box-title">Bảng dữ liệu</h3>
           <div class="box-tools pull-right">
-            <button type="button" @click="openEditForm()" class="btn btn-block btn-info">Thêm mới</button>
+            <router-link tag="button" class="btn btn-default" to="/borrow"><i class="fa fa-share"></i> Vay/Mượn</router-link>
+            <button type="button" @click="openEditForm()" class="btn btn-info">Thêm mới</button>
           </div>
         </div>
         <div class="box-body">

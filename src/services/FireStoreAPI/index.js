@@ -5,6 +5,7 @@ import events from './Events'
 import accounts from './Accounts'
 import tags from './Tags'
 import reports from './Reports'
+import borrow from './Borrow'
 
 export default {
   signIn(email, pass) {
@@ -20,5 +21,6 @@ export default {
   groups,
   tags,
   accounts,
-  reports
+  reports,
+  borrow
 }

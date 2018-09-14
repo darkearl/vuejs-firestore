@@ -41,7 +41,7 @@ const mutations = {
 
 const getters = {
     getName : (state) => (id) => {
-        return state.objItems[id]['name'] || ''
+        return state.objItems[id] && state.objItems[id]['name'] || id
     }
 }
 export default {
